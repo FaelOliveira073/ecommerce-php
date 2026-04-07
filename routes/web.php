@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\Admin\AdminProdutosController;
+use App\Http\Controllers\Admin\AdminClientesController;
 use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', [WebsiteController::class, 'home']);
