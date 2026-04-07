@@ -1,0 +1,9 @@
+@extends("index")
+@section("conteudo")
+    <main class="page-hero">
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor convallis eros dapibus luctus. Sed in lacus elementum metus porta pulvinar. Sed id lacus sit amet odio porttitor aliquet. Sed in diam arcu. Cras at tellus nisi. In tempus placerat sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eu dolor ac elit gravida pellentesque. Praesent interdum eleifend dolor, et dictum leo interdum non. Vivamus vitae tincidunt mauris, malesuada volutpat nulla. Curabitur sapien est, iaculis fermentum tincidunt quis, condimentum sit amet neque. Ut id urna metus. Duis quis tincidunt odio. Praesent felis elit, finibus sed consequat nec, lobortis at nunc.</p>
+            <p>In enim quam, rutrum vitae nibh vitae, ornare hendrerit orci. Etiam semper, magna ut cursus aliquam, purus erat suscipit elit, a egestas felis orci et nibh. Praesent fermentum porta mi eget ultricies. Aenean dictum urna ut magna mollis, ac posuere libero tempor. Quisque eu lorem varius, dapibus metus ac, volutpat orci. Duis a ultricies quam, nec laoreet turpis. Morbi id mauris nec massa rhoncus sollicitudin quis quis nisl. Cras condimentum ac nisi sed consequat. Ut non pretium augue. Etiam dictum efficitur massa id varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi fermentum euismod leo. Pellentesque sit amet efficitur mauris. Vestibulum quis pulvinar ipsum. Nullam quis leo egestas, auctor sapien tempor, cursus elit.</p>
+        </div>
+    <main>
+@endsection
