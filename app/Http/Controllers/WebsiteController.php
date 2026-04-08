@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produtos;
+
 class WebsiteController extends Controller
 {
-    //Listar todos os usuários
     public function home()
     {
         $produtos = [
@@ -17,7 +18,6 @@ class WebsiteController extends Controller
 
         $sql = "SELECT * FROM produtos";
         $produtos = Produtos::get();
-        //dd($produtos);
         return view("home",compact("produtos"));
     }
 

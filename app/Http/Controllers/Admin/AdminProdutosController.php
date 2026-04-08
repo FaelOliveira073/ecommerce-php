@@ -1,24 +1,38 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Produtos;
 
 class AdminProdutosController extends Controller
 {
-    public function index()
+    public function index($id=null)
     {
         $produtos = Produtos::get();
 
-        return view("admin.produtos.index",compact("produtos"));
+        $produto = null;
+
+        if($id){
+            $produto = Produtos::findOrFail($id);
+        }
+
+        return view("admin.produtos.index",compact("produtos","produto"));
     }
 
     public function salvar(Request $request)
     {
-        $p = new Produtos();
+
+        if($request->id){
+            $p = Produtos::find($request->$id);
+        } else {
+            $p = new Produtos();
+            $p->status = 1;
+        }
 
         $p->nome = $request->nome;
-        $p->fkIdCategoria = $request->categorias;
+        $p->fkIdCategoria = $request->categoria;
         $p->preco = $request->preco;
         $p->estoque = $request->estoque;
         $p->sku = $request->sku;
@@ -27,17 +41,14 @@ class AdminProdutosController extends Controller
 
         $p->save();
 
-        echo "Dados salvo com sucesso!";
-        //return redirect()->back();
+        return redirect()->back();
     }
 
     public function excluir($id)
     {
-        $p = Produto::findOrFail($1);
+        $p = Produto::findOrFail($id);
         $p->delete();
 
         return redirect()->back();
     }
 }
-
-
